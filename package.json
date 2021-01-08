@@ -5,11 +5,11 @@
   "author": "Andrew Leykin <katashi1328@mail.ru>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --config build/webpack.dev.conf.js --host 0.0.0.0 --port $PORT",
+    "dev": "webpack--config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "test": "node ",
-    "build": "npm install && npm install --save @/components/Comments",
+    "build": "npm install",
     "deploy": "node build/deploy.js"
   },
   "dependencies": {
