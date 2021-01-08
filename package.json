@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "test": "node ",
-    "build": "npm install",
+    "build": "npm install && npm install --save @/components/Comments",
     "deploy": "node build/deploy.js"
   },
   "dependencies": {
