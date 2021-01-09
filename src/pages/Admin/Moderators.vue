@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import AdminSearch from '@/components/Admin/Search'
-import AdminSidebar from '@/components/Admin/Sidebar'
-import FriendsBlock from '@/components/Friends/Block'
+import AdminSearch from 'src/components/Admin/Search'
+import AdminSidebar from 'src/components/Admin/Sidebar'
+import FriendsBlock from 'src/components/Friends/Block'
 export default {
   name: 'AdminModerators',
   components: { AdminSidebar, AdminSearch, FriendsBlock },

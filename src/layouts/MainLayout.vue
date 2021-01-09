@@ -9,9 +9,9 @@
 </template>
 
 <script>
-import MainLayoutHeader from '@/components/MainLayout/Header'
-import MainLayoutSidebar from '@/components/MainLayout/Sidebar'
-import RealTimeUpdater from '@/components/RealTimeUpdater'
+import MainLayoutHeader from 'src/components/MainLayout/Header'
+import MainLayoutSidebar from 'src/components/MainLayout/Sidebar'
+import RealTimeUpdater from 'src/components/RealTimeUpdater'
 export default {
   components: {
     MainLayoutHeader,

@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import AdminSearch from '@/components/Admin/Search'
-import AdminSidebar from '@/components/Admin/Sidebar'
-import CommentsBlock from '@/components/Comments/Block'
+import AdminSearch from 'src/components/Admin/Search'
+import AdminSidebar from 'src/components/Admin/Sidebar'
+import CommentsBlock from 'src/components/Comments/Block'
 export default {
   name: 'AdminComments',
   components: { AdminSidebar, AdminSearch, CommentsBlock },

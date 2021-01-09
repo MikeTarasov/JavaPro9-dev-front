@@ -25,7 +25,7 @@ export default {
 .admin-search {
   height: 62px;
   background: #FFFFFF;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   padding: 0 40px;

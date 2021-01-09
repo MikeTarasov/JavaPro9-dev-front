@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import FriendsPossible from '@/components/Friends/Possible'
-import ProfileInfo from '@/components/Profile/Info'
-import NewsAdd from '@/components/News/Add'
-import NewsBlock from '@/components/News/Block'
+import FriendsPossible from 'src/components/Friends/Possible'
+import ProfileInfo from 'src/components/Profile/Info'
+import NewsAdd from 'src/components/News/Add'
+import NewsBlock from 'src/components/News/Block'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'Profile',

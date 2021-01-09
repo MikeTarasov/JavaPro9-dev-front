@@ -8,9 +8,9 @@
 <script>
 import { VSnackbar } from 'vuetify/lib'
 import { mapGetters } from 'vuex'
-import FormLayout from '@/layouts/FormLayout'
-import MainLayout from '@/layouts/MainLayout'
-import EmptyLayout from '@/layouts/EmptyLayout'
+import FormLayout from 'src/layouts/FormLayout'
+import MainLayout from 'src/layouts/MainLayout'
+import EmptyLayout from 'src/layouts/EmptyLayout'
 
 export default {
   name: 'App',

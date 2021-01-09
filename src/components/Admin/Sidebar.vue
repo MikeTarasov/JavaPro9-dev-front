@@ -64,7 +64,6 @@ export default {
   }
 
   @media (max-width: breakpoint-xl) {
-    padding: 0;
     color: steel-gray;
     display: block;
     padding: 20px;

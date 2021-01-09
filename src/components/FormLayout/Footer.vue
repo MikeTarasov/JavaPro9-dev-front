@@ -1,9 +1,9 @@
 <template lang="pug">
   .form-layout__footer
     a.form-layout__footer-support(href="#") Поддержка
-    .form-layout__footer-language Язык: 
+    .form-layout__footer-language Язык:
       span.active(@click="toggleLanguageBlock") {{getActiveLanguage}}
-    span.form-layout__footer-copyright © Copyright {{year}} ZERONE
+    span.form-layout__footer-copyright © Copyright {{year}} ZERO
 </template>
 
 

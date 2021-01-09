@@ -5,10 +5,10 @@
         news-add(user)
       .news__list(v-if="getInfo")
         news-block(
-          v-for="feed in getFeeds" 
+          v-for="feed in getFeeds"
           :key="feed.id"
-          :info="feed" 
-          :edit="getInfo.id === feed.author.id" 
+          :info="feed"
+          :edit="getInfo.id === feed.author.id"
           :deleted="getInfo.id === feed.author.id"
         )
     .inner-page__aside
@@ -17,9 +17,9 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import FriendsPossible from '@/components/Friends/Possible'
-import NewsBlock from '@/components/News/Block'
-import NewsAdd from '@/components/News/Add'
+import FriendsPossible from 'src/components/Friends/Possible'
+import NewsBlock from 'src/components/News/Block'
+import NewsAdd from 'src/components/News/Add'
 export default {
   name: 'News',
   components: { FriendsPossible, NewsBlock, NewsAdd },

@@ -71,7 +71,7 @@ export default {
       }
     },
 
-    async apiLoadAllDialogs({ commit }, payload) {
+    async apiLoadAllDialogs(payload) {
       let query = []
       payload &&
         Object.keys(payload).map(el => {
@@ -89,7 +89,7 @@ export default {
           console.error(error)
         })
     },
-    async createDialogWithUser({ dispatch, commit }, userId) {
+    async createDialogWithUser(dispatch) {
       await axios({
         url: 'dialogs',
         method: 'POST',

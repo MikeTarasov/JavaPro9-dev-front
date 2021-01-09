@@ -29,7 +29,7 @@
 import moment from 'moment'
 import Vue from 'vue'
 import { mapActions, mapGetters } from 'vuex'
-import ChatMessage from '@/components/Im/ChatMessage'
+import ChatMessage from 'src/components/Im/ChatMessage'
 import VirtualList from 'vue-virtual-scroll-list'
 
 const makeHeader = msgDate => {

@@ -37,7 +37,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import moment from 'moment'
-import UserInfoFormBlock from '@/components/Settings/UserInfoForm/Block.vue'
+import UserInfoFormBlock from 'src/components/Settings/UserInfoForm/Block.vue'
 export default {
   name: 'SettingsMain',
   components: { UserInfoFormBlock },

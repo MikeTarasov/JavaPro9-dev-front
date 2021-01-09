@@ -12,8 +12,8 @@
 <script>
 import { mapActions } from 'vuex'
 import { required, email, minLength } from 'vuelidate/lib/validators'
-import PasswordField from '@/components/FormElements/PasswordField'
-import EmailField from '@/components/FormElements/EmailField'
+import PasswordField from 'src/components/FormElements/PasswordField'
+import EmailField from 'src/components/FormElements/EmailField'
 export default {
   name: 'Login',
   components: {
