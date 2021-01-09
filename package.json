@@ -5,9 +5,9 @@
   "author": "Andrew Leykin <katashi1328@mail.ru>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.dev.conf.js --port $PORT --host 0.0.0.0",
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "build": "npm install copy-webpack-plugin --save-dev",
+    "build": "npm install copy-webpack-plugin --save",
     "lint": "eslint --init && eslint --ext .js,.vue src",
     "test": "node ",
     "deploy": "node build/deploy.js"
