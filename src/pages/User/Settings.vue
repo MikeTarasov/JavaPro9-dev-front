@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import SettingsMain from 'src/components/Settings/Main'
-import SettingsPush from 'src/components/Settings/Push'
-import SettingsSecurity from 'src/components/Settings/Security'
-import SettingsDelete from 'src/components/Settings/Delete'
-import SettingsSidebar from 'src/components/Settings/Sidebar'
+import SettingsMain from '@/components/Settings/Main'
+import SettingsPush from '@/components/Settings/Push'
+import SettingsSecurity from '@/components/Settings/Security'
+import SettingsDelete from '@/components/Settings/Delete'
+import SettingsSidebar from '@/components/Settings/Sidebar'
 export default {
   name: 'Settings',
   components: { SettingsMain, SettingsPush, SettingsSecurity, SettingsDelete, SettingsSidebar },

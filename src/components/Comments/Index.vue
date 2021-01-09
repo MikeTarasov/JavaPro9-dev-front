@@ -19,8 +19,8 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import CommentBlock from 'src/components/Comments/Block'
-import CommentAdd from 'src/components/Comments/Add'
+import CommentBlock from '@/components/Comments/Block'
+import CommentAdd from '@/components/Comments/Add'
 export default {
   name: 'Comments',
   props: {

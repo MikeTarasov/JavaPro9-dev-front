@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Modal from 'src/components/Modal'
+import Modal from '@/components/Modal'
 import { mapGetters } from 'vuex'
 export default {
   name: 'SettingsSecurity',

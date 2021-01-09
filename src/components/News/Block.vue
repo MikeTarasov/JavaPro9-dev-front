@@ -17,7 +17,7 @@
         span.news-block__deffered-text Дата и время публикации: {{info.time | moment('DD.MM.YYYY, HH:mm')}} ({{diffTime(info.time)}})
       .news-block__author(v-if="!deffered")
         router-link.news-block__author-pic(:to="{name: 'ProfileId', params: {id: info.author.id}}")
-          img(:src="info.author.photo" :alt="info.author.first_name")
+          img(:@="info.author.photo" :alt="info.author.first_name")
         .news-block__author-info
           router-link.news-block__author-name(:to="{name: 'ProfileId', params: {id: info.author.id}}") {{info.author.first_name + ' ' + info.author.last_name}}
           span.news-block__author-time {{info.time | moment("from")}}
@@ -54,11 +54,11 @@
 </template>
 
 <script>
-import AddForm from 'src/components/News/AddForm'
+import AddForm from '@/components/News/AddForm'
 import { mapActions, mapGetters } from 'vuex'
 import moment from 'moment'
-import Comments from 'src/components/Comments'
-import LikeComment from 'src/components/LikeComment'
+import Comments from '@/components/Comments'
+import LikeComment from '@/components/LikeComment'
 // import AddTags from '@/components/News/AddTags'
 export default {
   name: 'NewsBlock',

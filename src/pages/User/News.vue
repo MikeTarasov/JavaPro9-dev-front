@@ -17,9 +17,9 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import FriendsPossible from 'src/components/Friends/Possible'
-import NewsBlock from 'src/components/News/Block'
-import NewsAdd from 'src/components/News/Add'
+import FriendsPossible from '@/components/Friends/Possible'
+import NewsBlock from '@/components/News/Block'
+import NewsAdd from '@/components/News/Add'
 export default {
   name: 'News',
   components: { FriendsPossible, NewsBlock, NewsAdd },

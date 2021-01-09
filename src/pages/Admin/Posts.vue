@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import AdminSearch from 'src/components/Admin/Search'
-import AdminSidebar from 'src/components/Admin/Sidebar'
-import NewsBlock from 'src/components/News/Block'
+import AdminSearch from '@/components/Admin/Search'
+import AdminSidebar from '@/components/Admin/Sidebar'
+import NewsBlock from '@/components/News/Block'
 export default {
   name: 'AdminPosts',
   components: { AdminSidebar, AdminSearch, NewsBlock },

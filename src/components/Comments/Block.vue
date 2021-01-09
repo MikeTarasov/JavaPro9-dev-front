@@ -41,8 +41,8 @@
 </template>
 
 <script>
-import CommentMain from 'src/components/Comments/Main'
-import CommentAdd from 'src/components/Comments/Add'
+import CommentMain from '@/components/Comments/Main'
+import CommentAdd from '@/components/Comments/Add'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'CommentBlock',
