@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js --port $PORT --host 0.0.0.0",
     "start": "npm run dev",
-    "build": "npm install --save @vue/cli",
+    "build": "npm install copy-webpack-plugin --save-dev",
     "lint": "eslint --init && eslint --ext .js,.vue src",
     "test": "node ",
     "deploy": "node build/deploy.js"
