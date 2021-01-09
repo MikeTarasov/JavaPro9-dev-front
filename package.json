@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "test": "node ",
-    "build": "npm install",
+    "build": "npm install && npm install --save @/components/Comments",
     "deploy": "node build/deploy.js"
   },
   "dependencies": {
@@ -90,7 +90,7 @@
   },
   "engines": {
     "node": "14.x",
-    "npm": ">= 3.0.0"
+    "npm": "6.x"
   },
   "browserslist": [
     "> 1%",
