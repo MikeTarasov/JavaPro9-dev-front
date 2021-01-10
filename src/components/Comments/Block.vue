@@ -41,8 +41,8 @@
 </template>
 
 <script>
-import CommentMain from 'Main.vue'
-import CommentAdd from 'Add.vue'
+import CommentMain from './Main.vue'
+import CommentAdd from './Add.vue'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'CommentBlock',
