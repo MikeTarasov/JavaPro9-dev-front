@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import AddForm from 'AddForm'
+import AddForm from './AddForm'
 import { mapActions, mapGetters } from 'vuex'
 import moment from 'moment'
 import Comments from '../../Comments/'
