@@ -57,7 +57,7 @@
 import AddForm from './AddForm'
 import { mapActions, mapGetters } from 'vuex'
 import moment from 'moment'
-import Comments from '../../Comments/'
+import Comments from '../../components/Comments'
 import LikeComment from '../LikeComment'
 // import AddTags from '@/components/News/AddTags'
 export default {
