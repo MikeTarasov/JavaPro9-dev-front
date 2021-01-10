@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import UserInfoFormBlock from '/components/Settings/UserInfoForm/Block.vue'
+import UserInfoFormBlock from '../../components/Settings/UserInfoForm/Block.vue'
 export default {
   name: 'AdminEdit',
   components: { UserInfoFormBlock },

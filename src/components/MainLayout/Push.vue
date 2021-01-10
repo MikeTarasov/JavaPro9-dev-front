@@ -18,7 +18,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import { getRouteByNotification } from '@/utils/notifications.utils.js';
+import { getRouteByNotification } from '../../utils/notifications.utils.js';
 export default {
   name: 'Push',
   props: {

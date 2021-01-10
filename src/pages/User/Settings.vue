@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import SettingsMain from '/components/Settings/Main'
-import SettingsPush from '/components/Settings/Push'
-import SettingsSecurity from '/components/Settings/Security'
-import SettingsDelete from '/components/Settings/Delete'
-import SettingsSidebar from '/components/Settings/Sidebar'
+import SettingsMain from '../../components/Settings/Main'
+import SettingsPush from '../../components/Settings/Push'
+import SettingsSecurity from '../../components/Settings/Security'
+import SettingsDelete from '../../components/Settings/Delete'
+import SettingsSidebar from '../../components/Settings/Sidebar.vue'
 export default {
   name: 'Settings',
   components: { SettingsMain, SettingsPush, SettingsSecurity, SettingsDelete, SettingsSidebar },

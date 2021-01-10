@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import FriendsPossible from '/components/Friends/Possible'
-import ProfileInfo from '/components/Profile/Info'
-import NewsBlock from '/components/News/Block'
+import FriendsPossible from '../../components/Friends/Possible'
+import ProfileInfo from '../../components/Profile/Info'
+import NewsBlock from '../../components/News/Block'
 import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'ProfileId',

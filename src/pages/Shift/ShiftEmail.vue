@@ -15,9 +15,9 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import { required, email, numeric } from 'vuelidate/lib/validators'
-import NumberField from '/components/FormElements/NumberField'
-import EmailField from '/components/FormElements/EmailField'
-import store from '/store/'
+import NumberField from '../../components/FormElements/NumberField'
+import EmailField from '../../components/FormElements/EmailField'
+import store from '../../store/'
 
 const isCode = value => +value === store.state.code
 
