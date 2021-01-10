@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import Modal from '@/components/Modal'
+import Modal from '../Modal'
 import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'FriendsBlock',

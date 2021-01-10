@@ -18,7 +18,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 import moment from 'moment'
-import AddTags from '@/components/News/AddTags'
+import AddTags from '/components/News/AddTags'
 export default {
   name: 'SearchFilterNews',
   components: { AddTags },

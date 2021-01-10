@@ -10,8 +10,8 @@
 
 <script>
 import { required, email, minLength } from 'vuelidate/lib/validators'
-import PasswordField from '@/components/FormElements/PasswordField'
-import EmailField from '@/components/FormElements/EmailField'
+import PasswordField from '/components/FormElements/PasswordField'
+import EmailField from '/components/FormElements/EmailField'
 export default {
   name: 'AdminLogin',
   components: {

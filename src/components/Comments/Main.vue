@@ -23,7 +23,7 @@
 
 <script>
 import { mapActions } from 'vuex'
-import LikeComment from '@/components/LikeComment'
+import LikeComment from '../LikeComment'
 export default {
   name: 'CommentMain',
   props: {

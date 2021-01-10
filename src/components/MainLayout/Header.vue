@@ -17,7 +17,7 @@
 
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
-import Push from '@/components/MainLayout/Push'
+import Push from '../MainLayout/Push'
 export default {
   name: 'MainLayoutHeader',
   components: { Push },

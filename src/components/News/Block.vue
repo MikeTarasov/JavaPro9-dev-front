@@ -54,11 +54,11 @@
 </template>
 
 <script>
-import AddForm from '@/components/News/AddForm'
+import AddForm from 'AddForm'
 import { mapActions, mapGetters } from 'vuex'
 import moment from 'moment'
-import Comments from '@/components/Comments'
-import LikeComment from '@/components/LikeComment'
+import Comments from '../Comments/'
+import LikeComment from '../LikeComment'
 // import AddTags from '@/components/News/AddTags'
 export default {
   name: 'NewsBlock',

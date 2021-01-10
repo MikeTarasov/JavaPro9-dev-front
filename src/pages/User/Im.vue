@@ -17,8 +17,8 @@
 <script>
 import moment from 'moment'
 import { mapGetters, mapActions } from 'vuex'
-import ImDialog from '@/components/Im/Dialog'
-import ImChat from '@/components/Im/Chat'
+import ImDialog from '/components/Im/Dialog'
+import ImChat from '/components/Im/Chat'
 export default {
   name: 'Im',
   components: { ImDialog, ImChat },

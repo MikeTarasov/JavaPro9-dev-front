@@ -43,8 +43,8 @@ import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
 import { Bold, Italic, Underline, Link } from 'tiptap-extensions'
 import { mapGetters, mapActions } from 'vuex'
 import moment from 'moment'
-import AddTags from '@/components/News/AddTags'
-import Modal from '@/components/Modal'
+import AddTags from 'AddTags'
+import Modal from '../Modal.vue'
 export default {
   name: 'NewsAddForm',
   props: {

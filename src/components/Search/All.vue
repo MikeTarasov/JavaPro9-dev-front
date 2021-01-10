@@ -9,9 +9,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import SearchBlock from '@/components/Search/Block'
-import FriendsBlock from '@/components/Friends/Block'
-import NewsBlock from '@/components/News/Block'
+import SearchBlock from '../Search/Block'
+import FriendsBlock from '../Friends/Block'
+import NewsBlock from '../News/Block'
 export default {
   name: 'SearchAll',
   components: { SearchBlock, FriendsBlock, NewsBlock },
