@@ -17,8 +17,8 @@
 <script>
 import moment from 'moment'
 import { mapGetters, mapActions } from 'vuex'
-import ImDialog from '../../components/Im/Dialog'
-import ImChat from '../../components/Im/Chat'
+import ImDialog from '@/components/Im/Dialog'
+import ImChat from '@/components/Im/Chat'
 export default {
   name: 'Im',
   components: { ImDialog, ImChat },
@@ -47,9 +47,9 @@ export default {
     },
     async selectDialogByRoute(route, vm) {
       if (route.query.activeDialog) {
-        await vm.switchDialog(route.query.activeDialog)
+        vm.switchDialog(route.query.activeDialog)
       } else if (route.query.userId) {
-        await vm.createDialogWithUser(route.query.userId)
+        vm.createDialogWithUser(route.query.userId)
       } else if (vm.dialogs.length > 0) {
         vm.$router.push({ name: 'Im', query: { activeDialog: vm.dialogs[0].id } })
       } else {
@@ -63,7 +63,7 @@ export default {
   },
   beforeRouteEnter(to, from, next) {
     next(async vm => {
-      await vm.selectDialogByRoute(to, vm)
+      vm.selectDialogByRoute(to, vm)
     })
   },
   beforeRouteUpdate(to, from, next) {

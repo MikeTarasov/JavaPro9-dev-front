@@ -7,8 +7,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import SearchBlock from '../Search/Block'
-import FriendsBlock from '../Friends/Block'
+import SearchBlock from '@/components/Search/Block'
+import FriendsBlock from '@/components/Friends/Block'
 export default {
   name: 'SearchUsers',
   components: { SearchBlock, FriendsBlock },

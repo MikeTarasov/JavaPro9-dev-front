@@ -9,7 +9,7 @@
 
 <script>
 import { required, email } from 'vuelidate/lib/validators'
-import EmailField from '../../components/FormElements/EmailField'
+import EmailField from '@/components/FormElements/EmailField'
 import { mapActions } from 'vuex'
 export default {
   name: 'Forgot',

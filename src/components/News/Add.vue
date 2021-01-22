@@ -14,7 +14,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import AddForm from './AddForm'
+import AddForm from '@/components/News/AddForm'
 
 export default {
   name: 'NewsAdd',

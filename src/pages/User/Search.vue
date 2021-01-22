@@ -9,12 +9,12 @@
 
 <script>
 import { mapGetters, mapMutations, mapActions } from 'vuex'
-import SearchTabs from '../../components/Search/Tabs'
-import SearchAll from '../../components/Search/All'
-import SearchUsers from '../../components/Search/Users'
-import SearchNews from '../../components/Search/News'
-import SearchFilterUsers from '../../components/Search/Filter/Users'
-import SearchFilterNews from '../../components/Search/Filter/News'
+import SearchTabs from '@/components/Search/Tabs'
+import SearchAll from '@/components/Search/All'
+import SearchUsers from '@/components/Search/Users'
+import SearchNews from '@/components/Search/News'
+import SearchFilterUsers from '@/components/Search/Filter/Users'
+import SearchFilterNews from '@/components/Search/Filter/News'
 export default {
   name: 'Search',
   components: { SearchTabs, SearchAll, SearchUsers, SearchNews, SearchFilterUsers, SearchFilterNews },

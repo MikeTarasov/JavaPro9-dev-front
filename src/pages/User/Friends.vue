@@ -14,10 +14,10 @@
 </template>
 
 <script>
-// import store from '@/store'
+import store from '@/store'
 import { mapGetters, mapActions } from 'vuex'
-import FriendsPossible from '../../components/Friends/Possible'
-import FriendsBlock from '../../components/Friends/Block'
+import FriendsPossible from '@/components/Friends/Possible'
+import FriendsBlock from '@/components/Friends/Block'
 export default {
   name: 'Friends',
   components: { FriendsPossible, FriendsBlock },

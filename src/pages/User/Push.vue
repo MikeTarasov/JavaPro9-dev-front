@@ -8,8 +8,8 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import PushSidebar from '../../components/Push/Sidebar'
-import PushBlock from '../../components/Push/Block'
+import PushSidebar from '@/components/Push/Sidebar'
+import PushBlock from '@/components/Push/Block'
 export default {
   name: 'PagePush',
   components: { PushSidebar, PushBlock },

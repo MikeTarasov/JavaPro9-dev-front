@@ -69,7 +69,9 @@ export default {
         data: email
       }).then(response => {}).catch(error => {})
     },
-      changeNotifications(dispatch) {
+    changeNotifications({
+      dispatch
+    }, data) {
       axios({
         url: 'account/notifications',
         method: 'PUT',
@@ -84,7 +86,9 @@ export default {
         dispatch('apiNotificationsSettings')
       }).catch(error => {})
     },
-    async apiNotificationsSettings() {
+    async apiNotificationsSettings({
+      commit
+    }) {
       await axios({
         url: 'account/notifications',
         method: 'GET'

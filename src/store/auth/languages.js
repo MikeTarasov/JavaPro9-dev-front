@@ -21,7 +21,9 @@ export default {
     toggleLanguageBlock: s => s.isOpenBlock = !s.isOpenBlock
   },
   actions: {
-    async apiLanguages() {
+    async apiLanguages({
+      commit
+    }) {
       await axios({
         url: 'platform/languages',
         method: 'GET'

@@ -13,9 +13,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import FormLayoutFooter from '../components/FormLayout/Footer.vue'
-import FormLayoutInfo from '../components/FormLayout/Info.vue'
-import FormLayoutLanguage from '../components/FormLayout/Language.vue'
+import FormLayoutFooter from '@/components/FormLayout/Footer'
+import FormLayoutInfo from '@/components/FormLayout/Info'
+import FormLayoutLanguage from '@/components/FormLayout/Language'
 export default {
   components: {
     FormLayoutInfo,

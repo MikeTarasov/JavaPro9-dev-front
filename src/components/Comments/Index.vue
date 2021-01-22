@@ -5,22 +5,22 @@
       a.comments__show(@click.prevent="showComments" href="#" v-if="info.length > 1") {{showText}}
     .comments__list(v-if="getInfo")
       comment-block(
-        :admin="admin"
-        v-for="i in info"
-        :key="i.id"
-        :info="i"
-        :edit="getInfo.id === i.author.id"
-        :deleted="getInfo.id === i.author.id"
+        :admin="admin" 
+        v-for="i in info" 
+        :key="i.id" 
+        :info="i" 
+        :edit="getInfo.id === i.author.id" 
+        :deleted="getInfo.id === i.author.id" 
         @edit-comment="onEditMain"
       )
       .comments__add(v-if="!admin")
-        comment-add(ref="addComment" :id="id" v-model="commentText" @submitted="onSubmitComment")
+        comment-add(ref="addComment" :id="id" v-model="commentText" @submited="onSubmitComment")
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import CommentBlock from './Block.vue'
-import CommentAdd from './Add.vue'
+import CommentBlock from '@/components/Comments/Block'
+import CommentAdd from '@/components/Comments/Add'
 export default {
   name: 'Comments',
   props: {

@@ -15,8 +15,8 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import FriendsBlock from '../../components/Friends/Block'
-import FriendsSearch from '../../components/Friends/Search'
+import FriendsBlock from '@/components/Friends/Block'
+import FriendsSearch from '@/components/Friends/Search'
 export default {
   name: 'FriendsFind',
   components: { FriendsBlock, FriendsSearch },

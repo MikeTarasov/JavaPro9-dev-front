@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     onSubmitComment() {
-      this.$emit('submitted')
+      this.$emit('submited')
     }
   }
 }

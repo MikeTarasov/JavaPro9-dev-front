@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import SearchBlock from '../Search/Block'
-import NewsBlock from '../News/Block'
+import SearchBlock from '@/components/Search/Block'
+import NewsBlock from '@/components/News/Block'
 import { mapGetters } from 'vuex'
 export default {
   name: 'SearchNews',

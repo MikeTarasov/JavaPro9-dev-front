@@ -13,7 +13,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getRouteByNotification } from '../../utils/notifications.utils.js'
+import { getRouteByNotification } from '@/utils/notifications.utils.js'
 export default {
   name: 'PushBlock',
   props: {

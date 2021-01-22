@@ -38,7 +38,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
-import Modal from '../Modal.vue'
+import Modal from '@/components/Modal'
 
 export default {
   name: 'ProfileInfo',
