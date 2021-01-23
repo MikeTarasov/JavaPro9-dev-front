@@ -19,13 +19,25 @@ switch (NODE_ENV) {
 const token = localStorage.getItem('user-token')
 if (token) axios.defaults.headers.common['Authorization'] = token
 
-axios.interceptors.response.use(null, error => {
-  // добавить проверку на законченный токен и сделать выход из приложения
-  // store.dispatch('auth/api/logout')
-  store.dispatch('global/alert/setAlert', {
-    status: 'error',
-    text: error.response.statusText
-  })
+axios.interceptors.response.use(null, (error) => {
+  let message = ''
+
+  if (error.response.data.error === 'invalid_request') {
+    message = error.response.data.error_description
+  } else {
+    message = error.response.data.path + ' - ' + error.response.data.error
+  }
+
+  if (error.response.status === 401) {
+    store.dispatch('auth/api/logout');
+    window.location.reload();
+  } else {
+    store.dispatch('global/alert/setAlert', {
+      status: 'error',
+      text: message
+    })
+  }
+
   console.error(error)
   return Promise.reject(error)
 });
