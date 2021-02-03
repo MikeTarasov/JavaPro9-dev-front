@@ -17,7 +17,7 @@ export default new Vuex.Store({
     users
   },
   state: {
-    code: 3675
+    code: Math.round(Math.random() * 90000 + 10000)
   },
   getters: {
     getCode: s => s.code
