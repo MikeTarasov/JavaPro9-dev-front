@@ -29,7 +29,7 @@ export default {
   },
   data: () => ({
     email: '',
-    code: 0,
+    code: Math.random() * 1000000 + 123456,
     number: ''
   }),
   computed: {
@@ -43,7 +43,7 @@ export default {
         return
       }
       this.changeEmail({ email: this.email }).then(() => {
-        this.$router.push({ name: 'ShiftEmailSuccess' })
+        this.$router.push({ name: 'Login' })
       })
     }
   },

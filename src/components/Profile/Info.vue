@@ -15,7 +15,7 @@
         span.user-status(:class="{online, offline: !online}") {{statusText}}
       .profile-info__block
         span.profile-info__title Дата рождения:
-        span.profile-info__val(v-if="info.birth_date") {{info.birth_date/1000 | moment("D MMMM YYYY") }} ({{info.ages}} лет)
+        span.profile-info__val(v-if="info.birth_date") {{info.birth_date/1000 | moment("D MMMM YYYY") }} ({{info.ages}} {{getAge}})
         span.profile-info__val(v-else) не заполнено
       .profile-info__block
         span.profile-info__title Телефон:
@@ -69,6 +69,17 @@ export default {
         : this.friend
         ? { variant: 'red', text: 'Удалить из друзей' }
         : { variant: 'white', text: 'Добавить в друзья' }
+    },
+    getAge() {
+      function declOfNum(n, text_forms) {
+        n = Math.abs(n) % 100;
+        let n1 = n % 10;
+        if (n > 10 && n < 20) { return text_forms[2]; }
+        if (n1 > 1 && n1 < 5) { return text_forms[1]; }
+        if (n1 === 1) { return text_forms[0]; }
+        return text_forms[2];
+      }
+      return declOfNum(this.info.ages, ['год', 'года', 'лет']);
     }
   },
   methods: {

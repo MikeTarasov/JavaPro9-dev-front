@@ -3,7 +3,6 @@
     form.shift-password__form(@submit.prevent="submitHandler")
       .form__block
         h4.form__subtitle Смена пароля
-        email-field(id="shift-email" v-model="email" :v="$v.email" :class="{checked: $v.email.required && $v.email.email}")
         password-field(id="shift-password" v-model="password" :v="$v.password" info registration :class="{checked: $v.password.required && $v.passwordTwo.sameAsPassword}")
         password-repeat-field(id="shift-repeat-password" v-model="passwordTwo" :v="$v.passwordTwo" :class="{checked: $v.password.required && $v.passwordTwo.sameAsPassword}")
       .form__block
@@ -13,51 +12,55 @@
       .shift-password__action
         button-hover(tag="button" type="submit" variant="white") Сменить
 </template>
-
+<!--email-field(id="shift-email" v-model="email" :v="$v.email" :class="{checked: $v.email.required && $v.email.email}")-->
 <script>
-import { mapGetters } from 'vuex'
-import { required, email, sameAs, minLength, numeric } from 'vuelidate/lib/validators'
+import {mapActions, mapGetters} from 'vuex'
+import { required, sameAs, minLength, numeric } from 'vuelidate/lib/validators'
 import PasswordField from '@/components/FormElements/PasswordField'
 import PasswordRepeatField from '@/components/FormElements/PasswordRepeatField'
 import NumberField from '@/components/FormElements/NumberField'
-import EmailField from '@/components/FormElements/EmailField'
+// import EmailField from '@/components/FormElements/EmailField'
 import store from '@/store'
 
 const isCode = value => +value === store.state.code
 
 export default {
-  name: 'ShiftPasssword',
+  name: 'ShiftPassword',
   components: {
     PasswordField,
     PasswordRepeatField,
-    NumberField,
-    EmailField
+    NumberField
+    // EmailField
   },
   data: () => ({
-    email: '',
+    // email: '',
     password: '',
     passwordTwo: '',
-    code: 3675,
+    code: Math.random() * 100000 + 12345,
     number: ''
   }),
   computed: {
     ...mapGetters(['getCode'])
   },
   methods: {
+    ...mapActions('profile/account', ['passwordSet']),
     submitHandler() {
       if (this.$v.$invalid) {
         this.$v.$touch()
         return
       }
+      this.passwordSet({ password: this.password }).then(() => {
+        this.$router.push({ name: 'Login' })
+      })
     }
   },
   mounted() {
     this.code = this.getCode
   },
   validations: {
-    email: { required, email },
+    // email: { required, email },
     password: { required, minLength: minLength(8) },
-    passwordTwo: { required, sameAsPassword: sameAs('password') },
+    passwordTwo: { required, minLength: minLength(8), sameAsPassword: sameAs('password') },
     number: {
       required,
       numeric,
