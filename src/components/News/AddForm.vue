@@ -26,21 +26,13 @@
       v-date-picker(v-model="planingTime" @input="onChangeDatePicker" title-position="left" :min-date='new Date()' is-inline :attributes='attrs' :key="componentKey")
       .news-add__modal-selects
         select.select.news-add__modal-select.day(v-model="day" @change="changeDate")
-          option(v-for="d in days" :key="d") {{
-    d
-  }}
+          option(v-for="d in days" :key="d") {{d}}
           select.select.news-add__modal-select.month(v-model="month" @change="changeDate")
-            option(v-for="month in months" :key="month.val" :value="month") {{
-    month.text
-  }}
+            option(v-for="month in months" :key="month.val" :value="month") {{month.text}}
           select.select.news-add__modal-select.year(v-model="year" @change="changeDate")
-            option(v-for="i in years" :key="i") {{
-    i
-  }}
+            option(v-for="i in years" :key="i") {{i}}
           select.select.news-add__modal-select.time(v-model="time")
-            option(v-for="t in times" :key="t") {{
-    t
-  }}
+            option(v-for="t in times" :key="t") {{t}}
         template(slot="actions")
           button-hover(@click.native="onPlaning") Планировать
           button-hover(variant="red" bordered @click.native="closeModal") Отмена
@@ -219,7 +211,7 @@ export default {
       this.title = this.info.title
       this.tags = this.info.tags
       this.editor = new Editor({
-        content: `<p>${this.info.post_text}</p>`,
+        content: '<p>${this.info.post_text}</p>',
         extensions: [new Bold(), new Italic(), new Underline(), new Link()]
       })
       if (this.deffered) {
