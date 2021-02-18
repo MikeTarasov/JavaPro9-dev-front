@@ -20,28 +20,17 @@
             option(value="null" disabled) До
             option(v-for="option in ages" :value="option") До {{option}}
       .friends-search__block
-        label.search__label Регион:
-          .friends-search__row
-            label.search__label(for="friends-search-country") Страна:
-            input.search__input(type="text" id="friends-search-country" v-model="country")
-          .friends-search__row
-            label.search__label(for="friends-search-city") Город:
-            input.search__input(type="text" id="friends-search-city" v-model="city")
+        .friends-search__row
+          label.search__label(for="friends-search-country") Страна:
+          input.search__input(type="text" id="friends-search-country" v-model="country")
+        .friends-search__row
+          label.search__label(for="friends-search-city") Город:
+          input.search__input(type="text" id="friends-search-city" v-model="city")
     button.friends-possible__btn(type="submit")
       simple-svg(:filepath="'/static/img/search.svg'")
       span.friends-possible__link Искать друзей
 </template>
-<!--        .search__row-->
-<!--          select.select.friends-search__select(v-model="country")-->
-<!--            option(value="null" disabled) Страна-->
-<!--            option Россия-->
-<!--            option Англия-->
-<!--            option США-->
-<!--          select.select.friends-search__select(v-model="city")-->
-<!--            option(value="null" disabled) Город-->
-<!--            option Москва-->
-<!--            option Лондон-->
-<!--            option Техас-->
+
 <script>
 import { mapActions } from 'vuex'
 export default {
@@ -69,7 +58,7 @@ export default {
   computed: {
     ages() {
       let result = []
-      for (let i = 1; i <= 100; i++) {
+      for (let i = 0; i <= 100; i++) {
         result.push(i);
       }
       return result
@@ -80,43 +69,35 @@ export default {
 
 <style lang="stylus">
 @import '../../assets/stylus/base/vars.styl';
-
 .friends-search {
   margin-top: 25px;
   padding-top: 20px;
   margin-bottom: 30px;
   border-top: 1px solid #E6E6E6;
 }
-
 .friends-search__row {
   @media (max-width: breakpoint-xl) {
     display: flex;
-
     .friends-search__block {
       flex: auto;
     }
-
     .friends-search__block + .friends-search__block {
       margin-top: 0;
       margin-left: 12px;
     }
   }
 }
-
 .friends-search__row + .friends-search__block {
   margin-top: 15px;
 }
-
 .friends-search__block {
   &+& {
     margin-top: 15px;
   }
 }
-
 .friends-search__select {
   display: block;
   width: 100%;
-
   &+& {
     margin-left: 12px;
   }
