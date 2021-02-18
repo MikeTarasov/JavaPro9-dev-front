@@ -39,7 +39,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import Modal from '@/components/Modal'
-import moment from 'moment'
 
 export default {
   name: 'ProfileInfo',
