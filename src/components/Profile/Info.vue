@@ -15,7 +15,7 @@
         span.user-status(:class="{online, offline: !online}") {{statusText}}
       .profile-info__block
         span.profile-info__title Дата рождения:
-        span.profile-info__val(v-if="info.birth_date") {{info.birth_date | moment("D MMMM YYYY") }} ({{info.ages}} года)
+        span.profile-info__val(v-if="info.birth_date") {{info.birth_date/1000 | moment("D MMMM YYYY") }} ({{info.ages}} лет)
         span.profile-info__val(v-else) не заполнено
       .profile-info__block
         span.profile-info__title Телефон:
