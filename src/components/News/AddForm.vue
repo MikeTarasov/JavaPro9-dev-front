@@ -26,25 +26,35 @@
       v-date-picker(v-model="planingTime" @input="onChangeDatePicker" title-position="left" :min-date='new Date()' is-inline :attributes='attrs' :key="componentKey")
       .news-add__modal-selects
         select.select.news-add__modal-select.day(v-model="day" @change="changeDate")
-          option(v-for="d in days" :key="d") {{d}}
-        select.select.news-add__modal-select.month(v-model="month" @change="changeDate")
-          option(v-for="month in months" :key="month.val" :value="month") {{month.text}}
-        select.select.news-add__modal-select.year(v-model="year" @change="changeDate")
-          option(v-for="i in years" :key="i") {{i}}
-        select.select.news-add__modal-select.time(v-model="time")
-          option(v-for="t in times" :key="t") {{t}}
-      template(slot="actions")
-        button-hover(@click.native="onPlaning") Планировать
-        button-hover(variant="red" bordered @click.native="closeModal") Отмена
+          option(v-for="d in days" :key="d") {{
+    d
+  }}
+          select.select.news-add__modal-select.month(v-model="month" @change="changeDate")
+            option(v-for="month in months" :key="month.val" :value="month") {{
+    month.text
+  }}
+          select.select.news-add__modal-select.year(v-model="year" @change="changeDate")
+            option(v-for="i in years" :key="i") {{
+    i
+  }}
+          select.select.news-add__modal-select.time(v-model="time")
+            option(v-for="t in times" :key="t") {{
+    t
+  }}
+        template(slot="actions")
+          button-hover(@click.native="onPlaning") Планировать
+          button-hover(variant="red" bordered @click.native="closeModal") Отмена
+
 </template>
 
 <script>
-import { Editor, EditorContent, EditorMenuBar } from 'tiptap'
-import { Bold, Italic, Underline, Link } from 'tiptap-extensions'
-import { mapGetters, mapActions } from 'vuex'
+import {Editor, EditorContent, EditorMenuBar} from 'tiptap'
+import {Bold, Italic, Link, Underline} from 'tiptap-extensions'
+import {mapActions, mapGetters} from 'vuex'
 import moment from 'moment'
 import AddTags from '@/components/News/AddTags'
 import Modal from '@/components/Modal'
+
 export default {
   name: 'NewsAddForm',
   props: {
@@ -52,7 +62,7 @@ export default {
     deffered: Boolean,
     info: Object
   },
-  components: { AddTags, EditorContent, EditorMenuBar, Modal },
+  components: {AddTags, EditorContent, EditorMenuBar, Modal},
   data: () => ({
     title: '',
     tags: [],
@@ -75,21 +85,21 @@ export default {
       }
     ],
     day: 1,
-    month: { val: 0, text: 'Января' },
+    month: {val: 0, text: 'Января'},
     year: 2000,
     months: [
-      { val: 0, text: 'Января' },
-      { val: 1, text: 'Февраля' },
-      { val: 2, text: 'Марта' },
-      { val: 3, text: 'Апреля' },
-      { val: 4, text: 'Мая' },
-      { val: 5, text: 'Июня' },
-      { val: 6, text: 'Июля' },
-      { val: 7, text: 'Августа' },
-      { val: 8, text: 'Сентября' },
-      { val: 9, text: 'Октября' },
-      { val: 10, text: 'Ноября' },
-      { val: 11, text: 'Декабря' }
+      {val: 0, text: 'Января'},
+      {val: 1, text: 'Февраля'},
+      {val: 2, text: 'Марта'},
+      {val: 3, text: 'Апреля'},
+      {val: 4, text: 'Мая'},
+      {val: 5, text: 'Июня'},
+      {val: 6, text: 'Июля'},
+      {val: 7, text: 'Августа'},
+      {val: 8, text: 'Сентября'},
+      {val: 9, text: 'Октября'},
+      {val: 10, text: 'Ноября'},
+      {val: 11, text: 'Декабря'}
     ],
     time: '12:00',
     times: [
@@ -114,7 +124,7 @@ export default {
   computed: {
     ...mapGetters('profile/info', ['getInfo']),
     years() {
-      return Array.from({ length: 60 }, (value, index) => 1970 + index)
+      return Array.from({length: 60}, (value, index) => 1970 + index)
     },
     days() {
       return this.month.val === 2
@@ -174,7 +184,7 @@ export default {
       })
     },
     setLinkUrl(command, url) {
-      command({ href: url })
+      command({href: url})
       this.isOpenLinkMenu = false
       this.editor.focus()
     },
