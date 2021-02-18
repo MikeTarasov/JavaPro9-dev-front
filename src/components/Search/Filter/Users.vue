@@ -11,28 +11,17 @@
       .search__row
         select.select.search-filter__select(v-model.number="age_from")
           option(value="null" disabled) От
-          option(value="31") От 31
-          option(value="32") От 32 
-          option(value="33") От 33 
+          option(v-for="option in ages" :value="option") От {{option}}
         span.search__age-defis —
         select.select.search-filter__select(v-model.number="age_to")
           option(value="null" disabled) До
-          option(value="34") До 34
-          option(value="35") До 35
-          option(value="36") До 36
-    .search-filter__block.region
-      label.search__label Регион:
-      .search__row
-        select.select.search-filter__select(v-model="country")
-          option(value="null" disabled) Страна
-          option Россия
-          option Англия
-          option США
-        select.select.search-filter__select(v-model="city")
-          option(value="null" disabled) Город
-          option Москва
-          option Лондон
-          option Техас
+          option(v-for="option in ages" :value="option") До {{option}}
+    .search-filter__block.country
+      label.search__label(for="search-people-country") Страна:
+      input.search__input(type="text" id="search-people-country" v-model="country")
+    .search-filter__block.city
+      label.search__label(for="search-people-city") Город:
+      input.search__input(type="text" id="search-people-city" v-model="city")
     .search-filter__block.btn-news(@click.prevent="onSearchUsers")
       button-hover Применить
 </template>
@@ -56,6 +45,15 @@ export default {
     onSearchUsers() {
       let { first_name, last_name, age_from, age_to, country, city } = this
       this.searchUsers({ first_name, last_name, age_from, age_to, country, city })
+    }
+  },
+  computed: {
+    ages() {
+      let result = []
+      for (let i = 0; i <= 100; i++) {
+        result.push(i);
+      }
+      return result
     }
   }
 }
