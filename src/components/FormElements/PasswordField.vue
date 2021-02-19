@@ -2,7 +2,7 @@
   .form__group(:class="{fill: password.length > 0}")
     label.form__label(:for="id") Пароль
     input.form__input(name="password" :id="id"
-      :type="passwordFieldType" 
+      :type="passwordFieldType"
       v-model.trim="password"
       @change="passwordBlur"
       :class="{invalid: ((v.$dirty && !v.required) || (v.$dirty && !v.minLength))}"

@@ -54,12 +54,12 @@ export default {
     }, password) {
       let data = {
         token: rootState.auth.api.token,
-        password
+        password: password
       }
       await axios({
         url: 'account/password/set',
         method: 'PUT',
-        data
+        data: data
       }).then(response => {}).catch(error => {})
     },
     async changeEmail({}, email) {

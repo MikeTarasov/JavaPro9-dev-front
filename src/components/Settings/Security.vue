@@ -17,6 +17,8 @@
 <script>
 import Modal from '@/components/Modal'
 import { mapGetters } from 'vuex'
+import router from '@/router'
+
 export default {
   name: 'SettingsSecurity',
   components: { Modal },
@@ -32,9 +34,13 @@ export default {
       this.modalShow = false
     },
     openModal(id) {
-      id === 'email'
-        ? (this.modalText = 'На ваш E-mail было отправлено письмо с подтверждением смены.')
-        : (this.modalText = 'На ваш E-mail было отправлено письмо с ссылкой для смены пароля.')
+      if (id === 'email') {
+        this.modalText = 'Переход на форму: смена e-mail';
+        router.push({name: 'ShiftEmail', params: {id: this.getInfo.id}});
+      } else {
+        this.modalText = 'Переход на форму: смена пароля';
+        router.push({name: 'ShiftPassword', params: {id: this.getInfo.id}});
+      }
       this.modalShow = true
     }
   }
