@@ -117,7 +117,9 @@ export default {
         .then(response => {
           mergeIncomingMessages({ commit, state }, response)
           if (state.chaseHistoryUnitilMessageId !== null) {
-            // dispatch('')
+            dispatch('apiUnreadedMessages')
+          } else {
+            dispatch('apiLoadAllDialogs')
           }
         })
         .catch(error => {
