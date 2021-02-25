@@ -30,11 +30,11 @@ export default {
   getters: {
     oldestKnownMessageId: s => (s.messages.length > 0 ? s.messages[0]['id'] : null),
     dialogs: s => s.dialogs,
-    activeDialog: s => s.dialogs.find(el => el.id == s.activeId),
+    activeDialog: s => s.dialogs.find(el => el.id === s.activeId),
     activeDialogId: s => s.activeId,
     dialogsLoaded: s => s.dialogsLoaded,
     unreadedMessages: s => s.unreadedMessages,
-    hasOpenedDialog: s => dialogId => !!s.dialogs.find(el => el.id == dialogId),
+    hasOpenedDialog: s => dialogId => !!s.dialogs.find(el => el.id === dialogId),
     isHistoryEndReached: s => s.isHistoryEndReached,
     messages: s => s.messages
   },
@@ -117,7 +117,9 @@ export default {
         .then(response => {
           mergeIncomingMessages({ commit, state }, response)
           if (state.chaseHistoryUnitilMessageId !== null) {
-            // dispatch('')
+            dispatch('apiUnreadedMessages')
+          } else {
+            dispatch('apiLoadAllDialogs')
           }
         })
         .catch(error => {
@@ -136,7 +138,7 @@ export default {
       })
         .then(response => {
           mergeIncomingMessages({ commit, state }, response)
-          if (response.data.data.length == 0) {
+          if (response.data.data.length === 0) {
             commit('markEndOfHistory')
           }
         })
